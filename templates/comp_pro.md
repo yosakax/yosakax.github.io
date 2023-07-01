@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContestX  問題  点 「」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABCXXX"]
 ---
 
