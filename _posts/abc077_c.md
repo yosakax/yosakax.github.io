@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest077 C 問題 300 点 「Snuke Festival」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC077"]
 ---
 

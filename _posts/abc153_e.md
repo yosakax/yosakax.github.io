@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest153 E 問題 500 点 「Crested Ibis vs Monster」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC153"]
 ---
 

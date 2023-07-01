@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest242 問題 400 点 「ABC Transform」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC242"]
 ---
 

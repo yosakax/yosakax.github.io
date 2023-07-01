@@ -1,4 +1,7 @@
 ---
+title: "三井住友信託銀行プログラミングコンテスト 2019 D 問題 400 点 「Lucky PIN」"
+date: 2022-07-02
+layout: post
 tags: ["sumitb"]
 ---
 

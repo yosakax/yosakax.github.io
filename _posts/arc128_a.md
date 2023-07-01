@@ -1,4 +1,7 @@
 ---
+title: "AtCoderRegularContest128 A 問題 400 点 「Gold and Silver」"
+date: 2022-07-02
+layout: post
 tags: ["ARC", "ARC128"]
 ---
 

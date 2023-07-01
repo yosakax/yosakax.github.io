@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest196 D 問題 400 点 「Hanjo」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC196"]
 ---
 

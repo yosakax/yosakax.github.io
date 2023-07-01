@@ -1,4 +1,7 @@
 ---
+title: "DISCO presents ディスカバリーチャンネル コードコンテスト 2020 予選 C 問題 400 点 「Strawberry Cakes」"
+date: 2022-07-02
+layout: post
 tags: ["ddcc"]
 ---
 

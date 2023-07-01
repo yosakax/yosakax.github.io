@@ -1,4 +1,7 @@
 ---
+title: "AtCoderPetrozavodskContest001 B 問題 300 点 「Two Arrays」"
+date: 2022-07-02
+layout: post
 tags: ["APC"]
 ---
 

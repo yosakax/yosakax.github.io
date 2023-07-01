@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest119 C 問題 300 点 「Synthetic Kadomatsu 」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC119"]
 ---
 

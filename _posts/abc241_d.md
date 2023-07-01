@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest241 D 問題 400 点 「Sequence Query」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC241"]
 ---
 

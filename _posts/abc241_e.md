@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest241 E 問題 500 点 「Putting Candies」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC241"]
 ---
 

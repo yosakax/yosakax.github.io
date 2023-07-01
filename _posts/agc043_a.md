@@ -1,4 +1,7 @@
 ---
+title: "AtCoderGrandContest043 A 問題 400 点 「Range Flip Find Route」"
+date: 2022-07-02
+layout: post
 tags: ["AGC", "AGC043"]
 ---
 

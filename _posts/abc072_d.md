@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest072 D 問題 400 点 「Derangement」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC072"]
 ---
 

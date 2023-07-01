@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest076 C 問題 300 点 「Dubious Document 2」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC076"]
 ---
 

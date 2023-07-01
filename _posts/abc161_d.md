@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest161 D 問題 400 点 「Lunlun Number」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC161"]
 ---
 

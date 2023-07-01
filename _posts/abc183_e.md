@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest183 E 問題 500 点 「Queen on Grid」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC183"]
 ---
 

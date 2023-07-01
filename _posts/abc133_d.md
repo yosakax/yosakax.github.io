@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest133 D 問題 400 点 「Rain Flows into Dams」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC133"]
 ---
 

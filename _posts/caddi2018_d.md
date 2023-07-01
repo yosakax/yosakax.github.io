@@ -1,5 +1,8 @@
 ---
-tags: ["caddi""]
+title: "CADDi 2018 for Beginners D 問題 400 点 「Harlequin」"
+date: 2022-07-02
+layout: post
+tags: ["caddi"]
 ---
 
 # CADDi 2018 for Beginners D 問題 400 点 「Harlequin」

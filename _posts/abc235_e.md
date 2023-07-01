@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest235 E 問題 500 点 「MST + 1」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC235"]
 ---
 

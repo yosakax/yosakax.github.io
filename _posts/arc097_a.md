@@ -1,4 +1,7 @@
 ---
+title: "AtCoderRegularContest097 A 問題 300 点 「K-th Substring」"
+date: 2022-07-02
+layout: post
 tags: ["ARC", "ARC097"]
 ---
 

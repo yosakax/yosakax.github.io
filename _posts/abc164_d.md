@@ -1,4 +1,7 @@
 ---
+title: "AtCoderBeginnerContest164 D 問題 400 点 「Multiple of 2019」"
+date: 2022-07-02
+layout: post
 tags: ["ABC", "ABC164"]
 ---
 
