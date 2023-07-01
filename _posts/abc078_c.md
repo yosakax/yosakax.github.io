@@ -1,0 +1,30 @@
+---
+tags: ["ABC", "ABC078"]
+---
+
+# AtCoderBeginnerContest078 C 問題 300 点 「HSI」
+
+<a href="https://atcoder.jp/contests/abc078/tasks/abc078_c" blank="_target">問題リンク</a>
+
+## 問題概要
+
+## 制約
+
+## 解法
+
+一般的に，以下のことが成り立つことを覚えておく。
+
+> 確率 p で成功する試行において，成功するまで行う試行回数の期待値は[$ \frac{1}{p}]となる
+
+これをもとに考えていく。TLE するかしないか$ \frac{1}{2}$の問題は M 個あるので，すべてが AC する確率は$ \left(\frac{1}{2} \right)^M$となる。
+一回の試行にかかる時間は 1900M + 100(N-M)なので，上記の条件を用いて，かかる時間の期待値は，$ 2^M \times (1900M + 100(N-M))$となる。
+
+## お気持ち
+
+## AC コード
+
+```python
+N, M = map(int, input().split())
+ans = 2 ** M * (1900 * M + 100 * (N - M))
+print(ans)
+```

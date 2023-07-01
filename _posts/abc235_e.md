@@ -1,0 +1,116 @@
+---
+tags: ["ABC", "ABC235"]
+---
+
+# AtCoderBeginnerContest235 E 問題 500 点 「MST + 1」
+
+<a href="https://atcoder.jp/contests/abc235/tasks/abc235_e" blank="_target">問題リンク</a>
+
+## 問題概要
+
+## 制約
+
+## 解法
+
+最小全域木を作る必要があるので，UnionFind を使用してクラスカル法を行う。
+クラスカル法は，公式解説によれば以下の手順で行う。
+
+> まず、N 頂点の UnionFind を用意する。
+> E∩e_i を辺の重みでソートした後に、辺を重み昇順に見ていく。今見ている辺を (u,v,w) として、
+> 頂点 u と頂点 v が UnionFind 上で連結ならば何もしない。
+> 頂点 u と頂点 v が UnionFind 上で非連結ならば、この辺を使用することにして UnionFind 上で u と v を連結にする。
+> という操作をグラフが連結になるまで繰り返す。
+
+クエリが得られる度にこれを行うと，計算量としては[$ O(QM\log(M)) ]くらいになってしまうため，TLE する。
+そこで，クエリと辺をまとめてクラスカル法を行うことで，すべてのクエリの判定を同時に行うことができる。
+クエリと辺を昇順にソートし，順に UnionFind で結合していく。
+その時，非連結かつクエリを使用して結合しようとする場合はクエリによって最小全域木が変更されるということなので，Yes を，すでに連結であれば No を出力すれば良い。
+その際の注意点として，クエリの使用を判定する際にノードが連結でなくとも結合してはいけない。使用してしまうと，クエリを前提とした最小全域木が作られてしまうためである。
+
+## お気持ち
+
+独立なクエリは同時に判定を行っていいらしい
+500 点以上でよく出題されるらしいので，頭の片隅においておきたい情報である。
+
+## AC コード
+
+```python
+from collections import defaultdict
+
+
+class UnionFind:
+    def __init__(self, n):
+        self.n = n
+        self.parents = [-1] * n
+
+    def find(self, x):
+        if self.parents[x] < 0:
+            return x
+        else:
+            self.parents[x] = self.find(self.parents[x])
+            return self.parents[x]
+
+    def union(self, x, y):
+        x = self.find(x)
+        y = self.find(y)
+
+        if x == y:
+            return
+
+        if self.parents[x] > self.parents[y]:
+            x, y = y, x
+
+        self.parents[x] += self.parents[y]
+        self.parents[y] = x
+
+    def size(self, x):
+        return -self.parents[self.find(x)]
+
+    def same(self, x, y):
+        return self.find(x) == self.find(y)
+
+    def members(self, x):
+        root = self.find(x)
+        return [i for i in range(self.n) if self.find(i) == root]
+
+    def roots(self):
+        return [i for i, x in enumerate(self.parents) if x < 0]
+
+    def group_count(self):
+        return len(self.roots())
+
+    def all_group_members(self):
+        group_members = defaultdict(list)
+        for member in range(self.n):
+            group_members[self.find(member)].append(member)
+        return group_members
+
+    def __str__(self):
+        return "\n".join(f"{r}: {m}" for r, m in self.all_group_members().items())
+
+
+N, M, Q = map(int, input().split())
+uf = UnionFind(N)
+VW = []
+for _ in range(M):
+    a, b, c = map(lambda x: int(x) - 1, input().split())
+    c += 1
+    VW.append((a, b, c, -1))
+for i in range(Q):
+    u, v, w = map(lambda x: int(x) - 1, input().split())
+    w += 1
+    VW.append((u, v, w, i))
+VW.sort(key=lambda x: x[2])
+ans = [""] * Q
+for i in range(M + Q):
+    u, v, w, idx = VW[i]
+    if uf.same(u, v):
+        if idx != -1:
+            ans[idx] = "No"
+    else:
+        if idx != -1:
+            ans[idx] = "Yes"
+        else:
+            uf.union(u, v)
+print(*ans, sep="\n")
+```

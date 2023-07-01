@@ -1,0 +1,49 @@
+---
+tags: ["ABC", "ABC076"]
+---
+
+# AtCoderBeginnerContest076 C 問題 300 点 「Dubious Document 2」
+
+<a href="https://atcoder.jp/contests/abc076/tasks/abc076_c" blank="_target">問題リンク</a>
+
+## 問題概要
+
+## 制約
+
+## 解法
+
+辞書順最小なので，S'の頭からやっていくと良くない。後から見ていくと，当てはまった後は?をすべて"a"で埋めれば辞書順最小になる。必ずしも$ |S| \le |T|$ではないことに注意。ここでめっちゃ詰まった
+
+## お気持ち
+
+## AC コード
+
+```python
+# coding: utf-8
+S = input()
+T = input()
+for i in range(len(S) - len(T), -1, -1):
+    flag = True
+    for j in range(len(T)):
+        if S[i+j] != T[j]:
+            if S[i+j] != "?":
+                flag = False
+    if flag:
+        idx = i
+        break
+if len(S) < len(T):
+    flag = False
+if flag:
+    ans = ""
+    for i in range(len(S)):
+        if idx <= i < idx + len(T):
+            ans += T[i-idx]
+        else:
+            if S[i] == "?":
+                ans += "a"
+            else:
+                ans += S[i]
+else:
+    ans = "UNRESTORABLE"
+print(ans)
+```

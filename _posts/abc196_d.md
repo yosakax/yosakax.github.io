@@ -1,0 +1,49 @@
+---
+tags: ["ABC", "ABC196"]
+---
+
+# AtCoderBeginnerContest196 D 問題 400 点 「Hanjo」
+
+<a href="https://atcoder.jp/contests/abc196/tasks/abc196_d" blank="_target">問題リンク</a>
+
+## 問題概要
+
+## 制約
+
+## 解法
+
+1x1 の畳はどうとでもなるので，2x1 の畳の埋め方を考える。Ａ個の畳について，HxW のどこにおいてもいいので，組合せは$ \_{HW}C_A$通りある。更に縦方向，横方向に置くことができるので$ 2^A$通り考えられる。python であれば itertools.combinations で座標の組合せを取得できるので，2x1 の畳が HW の外に出ていないことと畳が重なっていないかを考えれば求めることができる。なお，縦方向と横方向はそれぞれ下と右に座標を広げるようにすれば全探索できることに注意。
+
+## お気持ち
+
+## AC コード
+
+```python
+from itertools import permutations, combinations
+H, W, A, B = map(int, input().split())
+ans = 0
+coords = [(i, j) for j in range(W) for i in range(H)]
+for coord in combinations(coords, A):
+    for bit in range(1<<A):
+        mat = [[0] * W for _ in range(H)]
+        flag = True
+        for j in range(A):
+            x, y = coord[j]
+            if mat[x][y] == 0:
+                mat[x][y] = 1
+            else:
+                flag = False
+            if bit >> j & 1:
+                nx = x + 1
+                ny = y
+            else:
+                nx = x
+                ny = y + 1
+            if 0 <= nx < H and 0 <= ny < W and mat[nx][ny] == 0:
+                mat[nx][ny] = 1
+            else:
+                flag = False
+        if flag:
+            ans += 1
+print(ans)
+```
