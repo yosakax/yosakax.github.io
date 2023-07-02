@@ -4,10 +4,6 @@ layout: page
 title: About me
 ---
 
-## Name: Yasuhiro OSAKA <br>
-
-## University: Shibaura Institute of Technology <br>
-
 ## Likes
 
 - Machine Learning
@@ -19,6 +15,7 @@ title: About me
 - Python(research, competitive programming, hobby)
 - C++(research, competitive programming, hobby)
 - Nim(conpetitive programming, hobby)
+- Rust(conpetitive programming, hobby)
 
 ## Works
 
