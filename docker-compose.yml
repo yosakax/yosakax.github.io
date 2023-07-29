@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   jekyll:
@@ -7,9 +7,27 @@ services:
       - .:/site
       - jekyll:/usr/local/bundle
     ports:
-      - '4000:4000'
-      - '35729:35729'
-    command: [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000", "--livereload", "--livereload-port", "35729", "--baseurl", "/gh-pages-minima-starter" ] 
+      - "4000:4000"
+      - "35729:35729"
+    environment:
+      - TZ: Asia/Tokyo
+    command:
+      [
+        "bundle",
+        "exec",
+        "jekyll",
+        "serve",
+        "--force_polling",
+        "-H",
+        "0.0.0.0",
+        "-P",
+        "4000",
+        "--livereload",
+        "--livereload-port",
+        "35729",
+        "--baseurl",
+        "/gh-pages-minima-starter",
+      ]
 
 volumes:
-    jekyll:
+  jekyll:
