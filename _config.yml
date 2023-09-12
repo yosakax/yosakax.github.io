@@ -27,7 +27,7 @@ include:
   - _pages
 
 timezone:
-  - Asia/Tokyo
+  - "Asia/Tokyo"
 
 exclude:
   - .gitignore
