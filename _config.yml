@@ -26,6 +26,9 @@ header_pages:
 include:
   - _pages
 
+timezone:
+  - Asia/Tokyo
+
 exclude:
   - .gitignore
   - docker-compose.yml
